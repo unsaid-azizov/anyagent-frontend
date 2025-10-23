@@ -1,0 +1,10 @@
+# robots.txt for speech0.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://speech0.com/sitemap.xml
+
+# AI/LLM Information
+# See https://speech0.com/llms.txt for structured information about our business
