@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { CursorTrail } from "@/components/magicui/cursor-trail";
@@ -37,6 +38,16 @@ export default function RootLayout({
         >
           <CursorTrail />
           {children}
+
+          {/* ElevenLabs ConvAI Widget */}
+          {/* <div dangerouslySetInnerHTML={{
+            __html: '<elevenlabs-convai agent-id="agent_1101k89kvy38f0kb3g0xaxacz7cq"></elevenlabs-convai>'
+          }} />
+          <Script
+            src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+            strategy="afterInteractive"
+            async
+          /> */}
         </ThemeProvider>
       </body>
     </html>

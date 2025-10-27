@@ -6,7 +6,7 @@ export function FounderVideoClean() {
 
 
   return (
-    <section id="about" className="py-20 md:py-32 relative overflow-hidden bg-transparent">
+    <section id="about" className="py-20 md:py-32 relative overflow-hidden bg-transparent scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

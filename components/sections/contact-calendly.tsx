@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 import { useTheme } from "next-themes"
-import { Calendar } from "lucide-react"
+import { Calendar, Mail } from "lucide-react"
 import { FadeIn } from "@/components/magicui/fade-in"
 import { SITE_CONFIG } from "@/lib/constants"
 import { motion } from "framer-motion"
@@ -64,7 +64,7 @@ export function ContactCalendly() {
   }, [])
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-transparent">
+    <section id="contact" className="py-24 relative overflow-hidden bg-transparent scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <FadeIn>
           <div className="text-center mb-16">
@@ -98,13 +98,32 @@ export function ContactCalendly() {
         {/* Additional info */}
         <FadeIn delay={0.4}>
           <div className="mt-16 text-center">
-            <p className="text-gray-600 dark:text-gray-400 mb-4">or reach us directly at</p>
-            <a
-              href="mailto:stazizovs@gmail.com"
-              className="text-black dark:text-white hover:text-neutral-900 dark:hover:text-gray-300 font-semibold text-lg transition-colors"
-            >
-              stazizovs@gmail.com
-            </a>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">or reach us directly</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
+              <a
+                href="mailto:stazizovs@gmail.com"
+                className="flex items-center gap-2 text-black dark:text-white hover:text-neutral-600 dark:hover:text-gray-300 font-semibold text-lg transition-colors group"
+              >
+                <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                stazizovs@gmail.com
+              </a>
+              <span className="hidden sm:block text-gray-400">•</span>
+              <a
+                href="https://x.com/unsaid_azizov"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-black dark:text-white hover:text-neutral-600 dark:hover:text-gray-300 font-semibold text-lg transition-colors group"
+              >
+                <svg
+                  className="w-5 h-5 group-hover:scale-110 transition-transform"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                @unsaid_azizov
+              </a>
+            </div>
           </div>
         </FadeIn>
       </div>

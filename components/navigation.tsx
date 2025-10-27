@@ -24,10 +24,10 @@ export function Navigation() {
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             <a
-              href="#about"
+              href="#products"
               className="text-sm text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
             >
-              About
+              Products
             </a>
             <a
               href="#contact"

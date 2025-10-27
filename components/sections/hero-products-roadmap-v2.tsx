@@ -18,66 +18,66 @@ import type { CarouselApi } from "@/components/ui/carousel"
 
 const PRODUCTS = [
   {
-    id: "calls",
-    title: "AI Call Agents",
+    id: "inbound",
+    title: "Inbound Call Handling",
     image: "/images/3.png",
     icon: Phone,
     features: [
       "24/7 Availability",
-      "Natural Conversations",
-      "CRM Integration",
-      "Multi-language",
+      "Instant Response",
+      "Lead Qualification",
+      "Appointment Booking",
     ],
     steps: [
-      { title: "Discovery", detail: "15-min consultation to understand your call handling needs and business requirements" },
-      { title: "Training", detail: "Train AI on your products, services, and brand voice for natural conversations" },
-      { title: "Integration", detail: "Connect with your CRM, phone systems, and existing workflows" },
-      { title: "Testing", detail: "Test with real scenarios, refine responses, and optimize performance" },
-      { title: "Launch", detail: "Go live with 24/7 monitoring, analytics, and continuous improvement" },
+      { title: "Discovery", detail: "15-min call to understand your business, call volume, and what callers typically need" },
+      { title: "Training", detail: "AI learns your services, pricing, availability, and how to handle common questions" },
+      { title: "Integration", detail: "Connect with your phone system, calendar, and CRM for seamless operations" },
+      { title: "Testing", detail: "Test with real scenarios - service requests, quotes, bookings, and FAQs" },
+      { title: "Go Live", detail: "Launch with 24/7 call handling, instant lead capture, and guaranteed response time" },
     ],
   },
   {
-    id: "chatbots",
-    title: "RAG Chatbots",
+    id: "outbound",
+    title: "Outbound Calling",
     image: "/images/4.png",
     icon: MessageCircle,
     features: [
-      "Instant Answers",
-      "Document Search",
-      "Context Aware",
-      "Always Learning",
+      "Follow-up Automation",
+      "Lead Nurturing",
+      "Appointment Setting",
+      "Natural Conversations",
     ],
     steps: [
-      { title: "Audit", detail: "Review your documentation, FAQs, and knowledge base content" },
-      { title: "Data Prep", detail: "Structure and optimize content for AI retrieval and processing" },
-      { title: "Build", detail: "Develop RAG system with semantic search and context awareness" },
-      { title: "Design", detail: "Create chatbot interface matching your brand and user experience" },
-      { title: "Launch", detail: "Deploy with monitoring dashboard and continuous learning" },
+      { title: "Strategy", detail: "Define your outbound goals - follow-ups, appointment setting, or lead nurturing" },
+      { title: "Scripting", detail: "AI learns your messaging, value proposition, and objection handling techniques" },
+      { title: "List Setup", detail: "Import your contact lists and define calling schedules and priority rules" },
+      { title: "Testing", detail: "Run test campaigns to refine messaging, timing, and conversion optimization" },
+      { title: "Deploy", detail: "Launch automated outbound campaigns with real-time analytics and performance tracking" },
     ],
   },
   {
-    id: "workflows",
-    title: "AI Workflows",
+    id: "support",
+    title: "Customer Support",
     image: "/images/1.png",
     icon: Workflow,
     features: [
-      "Task Automation",
-      "System Integration",
-      "Smart Triggers",
-      "Real-time Analytics",
+      "Instant Answers",
+      "Issue Resolution",
+      "Smart Routing",
+      "Reduces Wait Times",
     ],
     steps: [
-      { title: "Mapping", detail: "Identify repetitive tasks and automation opportunities in your processes" },
-      { title: "Design", detail: "Design custom AI workflow architecture and automation pipelines" },
-      { title: "Build", detail: "Develop AI-powered automations with smart triggers and logic" },
-      { title: "Integration", detail: "Connect with your existing tools, databases, and systems" },
-      { title: "Deploy", detail: "Launch with team training, analytics, and ongoing optimization" },
+      { title: "Audit", detail: "Review your common support requests, FAQs, and escalation procedures" },
+      { title: "Knowledge Base", detail: "AI learns your products, policies, troubleshooting steps, and support protocols" },
+      { title: "Integration", detail: "Connect with helpdesk software, ticketing systems, and knowledge bases" },
+      { title: "Testing", detail: "Test support scenarios, escalation paths, and customer satisfaction outcomes" },
+      { title: "Launch", detail: "Deploy 24/7 support with instant answers, smart routing, and satisfaction tracking" },
     ],
   },
 ]
 
 export function HeroProductsRoadmapV2() {
-  const [selectedProduct, setSelectedProduct] = useState("calls")
+  const [selectedProduct, setSelectedProduct] = useState("inbound")
   const [selectedStep, setSelectedStep] = useState<number>(0)
   const { theme } = useTheme()
   const roadmapRef = useRef<HTMLDivElement>(null)
@@ -86,15 +86,13 @@ export function HeroProductsRoadmapV2() {
 
   const typingPhrases = [
     "Missed Calls",
-    "Slow Response Time",
-    "Manual Data Entry",
-    "Lost Leads",
-    "After-Hours Silence", 
-    "Unqualified Prospects",
-    "Forgotten Follow-ups",
+    "After-Hours Silence",
     "Weekend Downtime",
-    "Overwhelmed Inbox",
-    "No Lead Tracking",
+    "Lost Leads",
+    "Busy Phone Lines",
+    "Holiday Closures",
+    "Voicemail Hell",
+    "Peak Hour Chaos",
   ]
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0)
 
@@ -207,32 +205,34 @@ export function HeroProductsRoadmapV2() {
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-white mb-6 md:mb-8 leading-[1.15] md:leading-[1.1]">
               Stop Losing Money on{" "}
-              <span className="inline-block min-w-[300px] md:min-w-[500px]">
+              <span className="inline-block min-w-[300px] md:min-w-[500px] min-h-[1.2em]">
                 <TypingAnimation
                   key={currentPhraseIndex}
                   className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 dark:from-purple-400 dark:via-pink-400 dark:to-orange-400 bg-clip-text text-transparent"
                   words={[typingPhrases[currentPhraseIndex]]}
                   duration={100}
+                  startOnView={false}
+                  delay={0}
                 />
               </span>
               <span className="block text-2xl md:text-3xl lg:text-4xl font-light text-gray-600 dark:text-neutral-400 tracking-wide mt-4">
-                AI Agents work 24/7
+                24/7 AI Phone Agent
               </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 dark:text-neutral-400 mb-8 max-w-3xl">
-              Never miss a call, answer customer questions instantly, and automate repetitive tasks. Get back 20+ hours per week to focus on what matters.
+              Capture every lead with an AI phone agent that answers calls, qualifies prospects, and books appointments—even when you&apos;re busy, closed, or on the job.
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <button
                 onClick={openCalendly}
                 className="px-8 md:px-10 py-4 md:py-4.5 bg-black dark:bg-white text-white dark:text-black rounded-full font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all text-base md:text-lg shadow-lg hover:shadow-xl"
               >
-                Book Free Strategy Call
+                Start 2-Week Risk-Free Trial
               </button>
               <div className="text-gray-600 dark:text-neutral-400">
-                <p className="text-sm md:text-base">15-min consultation</p>
+                <p className="text-sm md:text-base">Live in 7 days</p>
                 <p className="text-sm md:text-base font-semibold text-black dark:text-white">
-                  See Results in 5 Weeks
+                  Zero effort required
                 </p>
               </div>
             </div>
@@ -240,7 +240,7 @@ export function HeroProductsRoadmapV2() {
         </div>
 
         {/* Product Cards - Mobile: Carousel, Desktop: Grid */}
-        <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-32">
+        <div id="products" className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-32 scroll-mt-20">
           {/* Mobile: Carousel with Title */}
           <div className="md:hidden px-6 mb-8">
             <div className="mb-6">
@@ -474,12 +474,12 @@ export function HeroProductsRoadmapV2() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
               >
-                <button
+                {/* <button
                   onClick={openCalendly}
                   className="px-12 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full text-base font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all shadow-lg"
                 >
                   Start Your Journey
-                </button>
+                </button> */}
               </motion.div>
             </motion.div>
           </AnimatePresence>
