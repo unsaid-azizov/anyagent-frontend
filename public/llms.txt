@@ -1,10 +1,10 @@
-# Speech0 - AI Automation Agency
+# VocalBeam - AI Automation Agency
 
 > Scale Your Business with AI Agents that Work 24/7
 
-## About Speech0
+## About VocalBeam
 
-Speech0 is an AI automation agency specializing in helping businesses scale through intelligent automation. We implement AI agents that handle inbound calls, outbound outreach, and process optimization - working around the clock to improve efficiency and reduce operational costs.
+VocalBeam is an AI automation agency specializing in helping businesses scale through intelligent automation. We implement AI agents that handle inbound calls, outbound outreach, and process optimization - working around the clock to improve efficiency and reduce operational costs.
 
 ## Our Services
 
@@ -46,18 +46,18 @@ We leverage cutting-edge AI technologies including:
 
 Ready to scale your business with AI?
 
-**Website**: https://speech0.com
-**Schedule a Call**: https://speech0.com/#contact
+**Website**: https://vocalbeam.com
+**Schedule a Call**: https://vocalbeam.com/#contact
 
 ---
 
 ## llms.txt Information
 
-This file provides structured information about Speech0 for AI language models and crawlers.
+This file provides structured information about VocalBeam for AI language models and crawlers.
 
-**Last Updated**: 2025-10-21
+**Last Updated**: 2025-10-30
 **Content Type**: Business Information, Service Descriptions
 **Crawling Policy**: All content is public and can be used for training and indexing
-**Company**: Speech0
+**Company**: VocalBeam
 **Industry**: AI Automation, Business Process Automation
 **Target Audience**: Business owners, entrepreneurs, enterprise companies looking to scale with AI

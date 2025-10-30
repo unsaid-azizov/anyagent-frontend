@@ -185,10 +185,10 @@ export function ContactClean() {
           <div className="mt-16 text-center">
             <p className="text-gray-600 dark:text-gray-400 mb-4">or reach us directly at</p>
             <a
-              href="mailto:stazizovs@gmail.com"
+              href="mailto:admin@vocalbeam.com"
               className="text-black dark:text-white hover:text-neutral-900 dark:hover:text-gray-300 font-semibold text-lg transition-colors"
             >
-              stazizovs@gmail.com
+              admin@vocalbeam.com
             </a>
           </div>
         </FadeIn>

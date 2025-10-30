@@ -1,10 +1,10 @@
-# robots.txt for speech0.com
+# robots.txt for vocalbeam.com
 
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://speech0.com/sitemap.xml
+Sitemap: https://vocalbeam.com/sitemap.xml
 
 # AI/LLM Information
-# See https://speech0.com/llms.txt for structured information about our business
+# See https://vocalbeam.com/llms.txt for structured information about our business

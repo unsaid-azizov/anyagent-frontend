@@ -1,9 +1,9 @@
 export const SITE_CONFIG = {
-  name: "Speech0",
+  name: "VocalBeam",
   tagline: "AI Automation Agency",
   description: "Transform your business with cutting-edge AI automation solutions",
   founderVideoUrl: "https://your-r2-storage-url.com/founder-video.mp4", // Update this with your R2 URL
-  calendlyUrl: "https://calendly.com/stazizovs/30min",
+  calendlyUrl: "https://calendly.com/said-simon/intro-call",
 }
 
 export const PRODUCTS = [

@@ -4,6 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Phone, MessageCircle, Database, Building2, CheckCircle2 } from "lucide-react"
 import { FadeIn } from "@/components/magicui/fade-in"
+import { SITE_CONFIG } from "@/lib/constants"
 
 const ROADMAPS = {
   calls: {
@@ -160,18 +161,7 @@ export function ServiceRoadmaps() {
               <div className="mt-10 pt-8 border-t border-gray-200 dark:border-neutral-800 text-center">
                 <button
                   onClick={() => {
-                    if (typeof window !== "undefined") {
-                      const calendlyWindow = window as unknown as Window & {
-                        Calendly?: {
-                          initPopupWidget: (config: { url: string }) => void
-                        }
-                      }
-                      if (calendlyWindow.Calendly) {
-                        calendlyWindow.Calendly.initPopupWidget({
-                          url: "https://calendly.com/stazizovs/30min"
-                        })
-                      }
-                    }
+                    window.open(SITE_CONFIG.calendlyUrl, "_blank")
                   }}
                   className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-all shadow-lg"
                 >

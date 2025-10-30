@@ -3,6 +3,7 @@
 import { ThemeToggle } from "./theme-toggle"
 import { Button } from "./ui/button"
 import { motion } from "framer-motion"
+import { SITE_CONFIG } from "@/lib/constants"
 
 export function Navigation() {
   return (
@@ -18,7 +19,7 @@ export function Navigation() {
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold text-black dark:text-white"
           >
-            Speech0
+            VocalBeam
           </motion.div>
 
           {/* Navigation Links */}
@@ -40,7 +41,7 @@ export function Navigation() {
           {/* Right side */}
           <div className="flex items-center space-x-4">
             <ThemeToggle />
-            <a href="#contact">
+            <a href={SITE_CONFIG.calendlyUrl} target="_blank" rel="noopener noreferrer">
               <Button className="hidden md:block bg-black dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100">
                 Book a Call
               </Button>

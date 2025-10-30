@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Speech0 - AI Automation Agency",
+  title: "VocalBeam - AI Automation Agency",
   description: "Transform your business with AI-powered automation. From intelligent call agents to RAG chatbots and AI-driven CRMs.",
 };
 

@@ -1,8 +1,8 @@
-# Speech0 - AI Automation Agency
+# VocalBeam - AI Automation Agency
 
 A modern, high-performance landing page built with Next.js 15, TypeScript, Tailwind CSS v4, and animated components.
 
-![Speech0 Landing Page](references/image.png)
+![VocalBeam Landing Page](references/image.png)
 
 ## Features
 
@@ -53,8 +53,8 @@ Edit `lib/constants.ts`:
 
 ```typescript
 export const SITE_CONFIG = {
-  name: "Speech0",
-  calendlyUrl: "https://calendly.com/stazizovs/30min", // Update with your Calendly URL
+  name: "VocalBeam",
+  calendlyUrl: "https://calendly.com/stazizovs/vocalbeam-demo-call", // Update with your Calendly URL
 }
 ```
 
@@ -138,7 +138,7 @@ speech0land/
 
 ## Deployment
 
-### Deploy to speech0.com (Production)
+### Deploy to vocalbeam.com (Production)
 
 This site is deployed on a VPS with nginx and systemd. To deploy:
 
@@ -161,17 +161,17 @@ The deployment script will:
 
 ```bash
 # Copy nginx config
-sudo cp /tmp/speech0.com.conf /etc/nginx/sites-available/
-sudo ln -s /etc/nginx/sites-available/speech0.com.conf /etc/nginx/sites-enabled/
+sudo cp /tmp/vocalbeam.com.conf /etc/nginx/sites-available/
+sudo ln -s /etc/nginx/sites-available/vocalbeam.com.conf /etc/nginx/sites-enabled/
 
 # Setup SSL
-sudo certbot --nginx -d speech0.com -d www.speech0.com
+sudo certbot --nginx -d vocalbeam.com -d www.vocalbeam.com
 
 # Setup systemd service
-sudo cp /tmp/speech0.service /etc/systemd/system/
+sudo cp /tmp/vocalbeam.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable speech0
-sudo systemctl start speech0
+sudo systemctl enable vocalbeam
+sudo systemctl start vocalbeam
 
 # Reload nginx
 sudo nginx -t
@@ -182,10 +182,10 @@ sudo systemctl reload nginx
 
 ```bash
 # Check application logs
-sudo journalctl -u speech0 -f
+sudo journalctl -u vocalbeam -f
 
 # Restart application
-sudo systemctl restart speech0
+sudo systemctl restart vocalbeam
 
 # Check nginx status
 sudo systemctl status nginx
@@ -218,8 +218,8 @@ For detailed conversation history and implementation details, see [claude.md](cl
 
 ## Support
 
-For questions or support: stazizovs@gmail.com
+For questions or support: admin@vocalbeam.com
 
 ## License
 
-© 2025 Speech0. All rights reserved.
+© 2025 VocalBeam. All rights reserved.

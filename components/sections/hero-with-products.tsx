@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { ArrowRight, Phone, MessageCircle, Database } from "lucide-react"
 import { FadeIn } from "@/components/magicui/fade-in"
+import { SITE_CONFIG } from "@/lib/constants"
 
 const PRODUCTS_GRID = [
   {
@@ -91,18 +92,7 @@ export function HeroWithProducts() {
             <div className="flex flex-col items-center gap-4 mb-12">
               <button
                 onClick={() => {
-                  if (typeof window !== "undefined") {
-                    const calendlyWindow = window as unknown as Window & {
-                      Calendly?: {
-                        initPopupWidget: (config: { url: string }) => void
-                      }
-                    }
-                    if (calendlyWindow.Calendly) {
-                      calendlyWindow.Calendly.initPopupWidget({
-                        url: "https://calendly.com/stazizovs/30min"
-                      })
-                    }
-                  }
+                  window.location.href = SITE_CONFIG.calendlyUrl
                 }}
                 className="rounded-full bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-100 px-10 py-4 text-lg font-semibold transition-all shadow-lg"
               >

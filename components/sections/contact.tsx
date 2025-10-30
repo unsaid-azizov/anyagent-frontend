@@ -194,10 +194,10 @@ export function Contact() {
           <div className="mt-16 text-center">
             <p className="text-gray-600 dark:text-gray-400 mb-4">or reach us directly at</p>
             <a
-              href="mailto:stazizovs@gmail.com"
+              href="mailto:admin@vocalbeam.com"
               className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold text-lg transition-colors"
             >
-              stazizovs@gmail.com
+              admin@vocalbeam.com
             </a>
           </div>
         </FadeIn>

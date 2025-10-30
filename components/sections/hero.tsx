@@ -72,7 +72,7 @@ export function Hero() {
           <FadeIn delay={0.4}>
             <p className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
               From intelligent call agents to RAG chatbots and value-driven CRMs—
-              <span className="text-purple-400 font-semibold"> Speech0</span> delivers
+              <span className="text-purple-400 font-semibold"> VocalBeam</span> delivers
               cutting-edge AI automation that scales your business.
             </p>
           </FadeIn>

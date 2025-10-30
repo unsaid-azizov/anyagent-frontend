@@ -154,43 +154,8 @@ export function HeroProductsRoadmapV2() {
   }
 
   const openCalendly = () => {
-    if (typeof window !== "undefined") {
-      const calendlyWindow = window as unknown as Window & {
-        Calendly?: {
-          initPopupWidget: (config: {
-            url: string
-            pageSettings: {
-              backgroundColor: string
-              primaryColor: string
-              textColor: string
-            }
-          }) => void
-        }
-      }
-
-      if (calendlyWindow.Calendly) {
-        const isDark = theme === "dark"
-        calendlyWindow.Calendly.initPopupWidget({
-          url: SITE_CONFIG.calendlyUrl,
-          pageSettings: {
-            backgroundColor: isDark ? "0a0a0a" : "ffffff",
-            primaryColor: isDark ? "ffffff" : "111827",
-            textColor: isDark ? "ffffff" : "000000",
-          },
-        })
-      }
-    }
+    window.open(SITE_CONFIG.calendlyUrl, "_blank")
   }
-
-  useEffect(() => {
-    const script = document.createElement("script")
-    script.src = "https://assets.calendly.com/assets/external/widget.js"
-    script.async = true
-    document.body.appendChild(script)
-    return () => {
-      document.body.removeChild(script)
-    }
-  }, [])
 
   return (
     <section className="relative min-h-screen bg-transparent overflow-hidden">
